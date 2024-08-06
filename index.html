@@ -8,18 +8,20 @@
 </head>
 <body>
     <header></header>
-    <h1 class="title">Desafio</h1>
-    <div>
-        <textarea placeholder="Digite seu texto"></textarea>
+    <h1 class="title">Decodificador</h1>
+    <div class="box1">
+        <textarea onkeydown="validaCampo()" placeholder="Digite seu texto"></textarea>
+        <textarea id="resultadoTexto" placeholder="Resultado"></textarea>
+        <button class="criptoButton" onclick="criptografar()">Criptografar</button>
+        <button class="decriptoButton" onclick="descriptografar()">Descriptografar</button>
     </div>
-    <h3>Resultado:</h3>
-    <div id="resultadoTexto"></div>
-    <div>
-        <span>Apenas letras minúsculas e sem acento</span>
-        <button onclick="criptografar()">Criptografar</button>
-        <button onclick="descriptografar()">Descriptografar</button>
+    <span>Apenas letras minúsculas e sem acento</span>
+    <div class="box2">
     </div>
-    <footer>Created by <strong>Gabriel Fiss</strong></footer>
+    <div>
+        
+    </div>
+    <footer>Created by  Gabriel Fiss</footer>
     <script src="app.js" defer ></script>
 </body>
 </html>

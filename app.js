@@ -43,3 +43,14 @@ function descriptografar(){
         let campo = document.getElementById('resultadoTexto');
         campo.innerHTML = textoDescriptografado;
 }
+
+function validaCampo(){
+    document.querySelector('textarea').addEventListener('keydown', function(event) {
+        let regex = /[A-Z]\b/; // bloqueia letras maisculas
+        if (event.key.match(regex)) {
+            event.preventDefault();
+            console.log('tecla nao permitida')
+        }
+    });
+}
+

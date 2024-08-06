@@ -2,14 +2,84 @@
     margin: 0;
 }
 
+body{
+  background-image: url(./images/matrix.jpeg);
+  background-position: cover;
+  color: #ccc;
+ 
+}
+::placeholder{
+  color: #ccc;
+  font-size: 16px;
+  font-weight: bold;
+}
 .title {
     margin: 10px;
+    color: #ccc;
 }
 #resultadoTexto {
-  padding: 12px;
 }
 textarea {
-  width: 50%;
+  flex-wrap: wrap;
+  display: flex;
+  width: 45%;
+  height: 3em;
   padding: 12px 20px;
   margin-left: 5px;
+  border: 2px solid green;
+  border-radius: 6px;
+  resize: none;
+  background-color: transparent;
+  color: #ccc;
+}
+
+.box1{
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  flex-wrap: wrap;
+}
+
+.box2{
+  display: flex;
+  
+}
+
+.criptoButton{
+  font-size: 16px;
+  padding: 10px;
+  width: 10em;
+  background-color: green;
+  font-weight: bold;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 1em;
+}
+
+.decriptoButton{
+  font-size: 16px;
+  padding: 10px;
+  width: 10em;
+  background-color: transparent;
+  font-weight: bold;
+  color: white;
+  border: 1px solid green;
+  border-radius: 1em;
+}
+.criptoButton:hover{
+  //animacao
+}
+span {
+  padding-left: 1em;
+  font-weight: bold;
+}
+
+footer{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  
 }
