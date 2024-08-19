@@ -10,13 +10,12 @@
     <header></header>
     <h1 class="title">DECODIFICADOR</h1>
     <div class="box1">
-        <textarea onkeydown="validaCampo()" placeholder="Digite seu texto"></textarea>
-        <textarea id="resultadoTexto" placeholder="Resultado"></textarea>
-        <span>Apenas letras minúsculas e sem acento</span>
-
+        <textarea class="textareaCripto" onkeydown="validaCampo()" placeholder="Digite seu texto"></textarea> 
+        <textarea class="textareaResult" id="resultadoTexto" placeholder="Resultado"></textarea>
+        <span>Apenas letras minúsculas e sem acento</span>  
         <button class="criptoButton" onclick="criptografar()">Criptografar</button>
         <button class="decriptoButton" onclick="descriptografar()">Descriptografar</button>
-        <button class="copyButton" onclick="copy()">Copiar</button>
+        <!-- <button class="copyButton" onclick="copy()">Copiar</button> -->
 
     </div>
     <div class="box2">
