@@ -1,8 +1,3 @@
-function validaCampo(){
-    let palavra = document.querySelector('textarea').value;
-    palavra.toLowerCase();
-    return console.log(palavra);
-}
 
 function criptografar(){
     let palavra = document.querySelector('textarea').value;
@@ -44,13 +39,35 @@ function descriptografar(){
         campo.innerHTML = textoDescriptografado;
 }
 
-function validaCampo(){
+function validaCampo() {
+    let spanAlerta = document.getElementById('spanAlerta');
+    let buttonCripto= document.getElementById('criptoButton');
+    let buttonDecripto= document.getElementById('decriptoButton');
+    let spanInfo = document.getElementById('spanInfo');
+
     document.querySelector('textarea').addEventListener('keydown', function(event) {
-        let regex = /[A-Z]\b/; // bloqueia letras maisculas
-        if (event.key.match(regex)) {
+        // Regex para permitir apenas letras minúsculas, números e espaços
+        let regex = /^[a-z0-9\s]$/;
+
+        // Teclas permitidas (Backspace, Delete, Arrow keys, etc.)
+        let allowedKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Tab', 'Enter', 'Shift', 'Control', 'Alt', 'Escape', 'CapsLock'];
+
+        if (!event.key.match(regex) && !allowedKeys.includes(event.key)) {
             event.preventDefault();
-            console.log('tecla nao permitida')
+            spanInfo.style.color = 'red';
+            buttonCripto.style.opacity= 0.5;
+            buttonCripto.disabled = true;
+            buttonDecripto.style.opacity= 0.5;
+            buttonDecripto.disabled = true;
+        } else {
+            spanInfo.style.color = 'white';
+            buttonCripto.style.opacity= 1;
+            buttonCripto.disabled = false;
+            buttonDecripto.style.opacity= 1;
+            buttonDecripto.disabled = false;
         }
     });
 }
+
+
 
